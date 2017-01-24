@@ -1,3 +1,5 @@
+import numpy as np
+
 def AND(x1, x2):
     w1, w2, theta = 0.5, 0.5, 0.7
     tmp = x1 * w1 + x2 * w2
@@ -8,3 +10,20 @@ def AND(x1, x2):
 
 
 print(AND(0, 0))
+print(AND(1, 0))
+print(AND(0, 1))
+print(AND(1, 1))
+
+x = np.array([0, 1])
+w = np.array([0.5, 0.5])
+
+b = -0.7
+
+result = w*x
+print(result)
+
+result = np.sum(result)
+print(result)
+
+result = np.sum(w*x) + b
+print(result)
